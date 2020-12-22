@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+
+  imp-os:
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    container_name: imp-os
+    restart: unless-stopped
+    tty: true
+    working_dir: /var/source
+    volumes:
+      - ./source:/var/source
