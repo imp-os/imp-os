@@ -26,7 +26,7 @@ When within the running container, the /var/source folder is the default folder 
 
 This script must necessarily be run first. It requires no parameters to operate; it simply checks out all the IMP OS related repositories ready to use (e.g. kernel, bootloader07, basic, etc.)
 
-### build.sh
+### checkout.sh
 
 Having run ``clone.sh``, this script will - when run - ask for whichever flavour of Raspberry Pi IMP OS is to be configured for.
 
