@@ -41,8 +41,8 @@ echo "(cd repos/cli          && make clean && make ${isa}-bit)" >> build.sh
 echo "(cd repos/hello        && make clean && make ${isa}-bit)" >> build.sh
 echo "(cd repos/kernel       && make clean && make ${isa}-bit)" >> build.sh
 echo "(cd repos/stdlib       && make clean && make ${isa}-bit)" >> build.sh
-echo "$(rm -rf image)"                                          >> build.sh
-echo "$(mkdir  image)"                                          >> build.sh
+echo "rm -rf image"                                             >> build.sh
+echo "mkdir  image"                                             >> build.sh
 echo "cp repos/sd-card/*                image/"                 >> build.sh
 echo "cp repos/bootloader07/kernel*.img image/"                 >> build.sh
 echo "cp repos/basic/basic.bin          image/"                 >> build.sh
