@@ -35,12 +35,12 @@ case "pi-${generation}-${model}-${isa}bit" in
 		armstub="armstub7"
 esac
 echo "(cd repos/armstubs     && make clean && make all)"        >  build.sh
-echo "(cd repos/basic        && make clean && make ${isa}-bit)" >> build.sh
 echo "(cd repos/bootloader07 && make clean && make ${isa}-bit)" >> build.sh
-echo "(cd repos/cli          && make clean && make ${isa}-bit)" >> build.sh
-echo "(cd repos/hello        && make clean && make ${isa}-bit)" >> build.sh
 echo "(cd repos/kernel       && make clean && make ${isa}-bit)" >> build.sh
 echo "(cd repos/stdlib       && make clean && make ${isa}-bit)" >> build.sh
+echo "(cd repos/basic        && make clean && make ${isa}-bit)" >> build.sh
+echo "(cd repos/cli          && make clean && make ${isa}-bit)" >> build.sh
+echo "(cd repos/hello        && make clean && make ${isa}-bit)" >> build.sh
 echo "rm -rf image"                                             >> build.sh
 echo "mkdir  image"                                             >> build.sh
 echo "cp repos/sd-card/*                image/"                 >> build.sh
